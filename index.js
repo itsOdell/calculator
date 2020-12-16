@@ -29,6 +29,7 @@ for (var i = 0; i < 18; i++) {
 
 function clear() {
     preview.innerHTML = "";
+    output.innerHTML = "";
 }
 function showInPreview(clickOrButton) {
     switch(clickOrButton) {
@@ -101,7 +102,6 @@ function showInPreview(clickOrButton) {
             break;
 
         case "=":
-            clear();
             calculate();
             break;
     }
@@ -110,9 +110,9 @@ function showInPreview(clickOrButton) {
 
 document.addEventListener("keypress", function(event) {
     showInPreview(event.key);
-})
+});
 
 
 function calculate() {
-
+    output.innerHTML = eval(preview.innerHTML);
 }

@@ -74,4 +74,10 @@ main{
     align-items: center;
     padding-right: 30px;
     flex-wrap: wrap;
+    color: white;
+    letter-spacing: 3px;
+}
+.hidden{
+    visibility: hidden;
+    opacity: 0;
 }
