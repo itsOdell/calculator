@@ -41,6 +41,10 @@ function showInPreview(clickOrButton) {
             preview.innerHTML = preview.innerHTML.slice(0, -1);
             break;
 
+        case "Backspace":
+            preview.innerHTML = preview.innerHTML.slice(0, -1);
+            break;
+            
         case "/":
             preview.innerHTML += "/";
             break;
@@ -102,6 +106,10 @@ function showInPreview(clickOrButton) {
             break;
 
         case "=":
+            calculate();
+            break;
+
+        case "Enter":
             calculate();
             break;
     }
