@@ -34,12 +34,11 @@ function showInPreview(clickOrButton) {
             break;
 
         case "span-two":
-            preview.innerHTML = preview.innerHTML.split('');
-            preview[-1] = "";
+            preview.innerHTML = preview.innerHTML.slice(0, -1);
             break;
 
         case "divide":
-            preview.innerHTML += " / ";
+            preview.innerHTML += "/";
             break;
 
         case "seven":
@@ -55,7 +54,7 @@ function showInPreview(clickOrButton) {
             break;
 
         case "x":
-            preview.innerHTML += " * ";
+            preview.innerHTML += "*";
             break;
 
         case "four":
@@ -71,7 +70,7 @@ function showInPreview(clickOrButton) {
             break;
 
         case "minus":
-            preview.innerHTML += " - ";
+            preview.innerHTML += "-";
             break;
 
         case "one":
@@ -87,7 +86,7 @@ function showInPreview(clickOrButton) {
             break;
 
         case "plus":
-            preview.innerHTML += " + ";
+            preview.innerHTML += "+";
             break;
 
         case "span-two2":
@@ -99,6 +98,7 @@ function showInPreview(clickOrButton) {
             break;
 
         case "equal":
+            calculate();
             break;
     }
 }
