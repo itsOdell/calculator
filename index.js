@@ -23,33 +23,36 @@ let output = document.querySelector(".output");
 for (var i = 0; i < 18; i++) {
     var btn = document.querySelectorAll(".btn")[i];
     btn.addEventListener("click", function() {
-        showInPreview(this.classList[0]);
+        showInPreview(this.innerHTML);
     });
 }
 
+function clear() {
+    preview.innerHTML = "";
+}
 function showInPreview(clickOrButton) {
     switch(clickOrButton) {
-        case "ac":
-            preview.innerHTML = "";
+        case "AC":
+            clear();
             break;
 
-        case "span-two":
+        case "DEL":
             preview.innerHTML = preview.innerHTML.slice(0, -1);
             break;
 
-        case "divide":
+        case "/":
             preview.innerHTML += "/";
             break;
 
-        case "seven":
+        case "7":
             preview.innerHTML += 7;
             break;
 
-        case "eight":
+        case "8":
             preview.innerHTML += 8;
             break;
             
-        case "nine":
+        case "9":
             preview.innerHTML += 9;
             break;
 
@@ -57,48 +60,59 @@ function showInPreview(clickOrButton) {
             preview.innerHTML += "*";
             break;
 
-        case "four":
+        case "4":
             preview.innerHTML += 4;
             break;
 
-        case "five":
+        case "5":
             preview.innerHTML += 5;
             break;
 
-        case "six":
+        case "6":
             preview.innerHTML += 6;
             break;
 
-        case "minus":
+        case "-":
             preview.innerHTML += "-";
             break;
 
-        case "one":
+        case "1":
             preview.innerHTML += 1;
             break;
 
-        case "two":
+        case "2":
             preview.innerHTML += 2;
             break;
 
-        case "three":
+        case "3":
             preview.innerHTML += 3;
             break;
 
-        case "plus":
+        case "+":
             preview.innerHTML += "+";
             break;
 
-        case "span-two2":
+        case "0":
             preview.innerHTML += 0;
             break;
 
-        case "dot":
+        case ".":
             preview.innerHTML += ".";
             break;
 
-        case "equal":
+        case "=":
+            clear();
             calculate();
             break;
     }
+}
+
+
+document.addEventListener("keypress", function(event) {
+    showInPreview(event.key);
+})
+
+
+function calculate() {
+
 }
