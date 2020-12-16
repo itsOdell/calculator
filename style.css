@@ -64,6 +64,7 @@ main{
     padding-right: 30px;
     flex-wrap: wrap;
     color: white;
+    letter-spacing: 3px;
 }
 .output{
     width: 240px;
